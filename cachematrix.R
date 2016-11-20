@@ -32,16 +32,3 @@ cacheSolve <- function(x, ...) {
 a=matrix(1:4,2,2)
 c=makeCacheMatrix(a)
 cacheSolve(c)
-
-
-
-
-makeCacheMatrix <- function(x = matrix()) {
-    m <- NULL
-    get <- function() x
-    setinverse <- function(solve) m <<- solve
-    getinverse<- function() m
-    list( get = get,
-         setinverse = setinverse,
-         getinverse = getinverse)
-}
